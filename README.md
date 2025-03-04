@@ -1,0 +1,52 @@
+<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+  <a href="http://nestjs.com/" target="_blank">
+    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
+  </a>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="50">
+    <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+  </svg>
+
+  <a href="https://ollama.com">
+    <img alt="Ollama Logo" height="120" src="https://github.com/ollama/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7" />
+  </a>
+</div>
+
+## Descripción
+
+Este es un backend desarrollado con [NestJS](https://github.com/nestjs/nest) y TypeScript que se encarga de realizar peticiones a un servidor de [Ollama](https://github.com/ollama/ollama).
+
+## Configuración del proyecto
+
+Instala las dependencias necesarias con el siguiente comando:
+
+```bash
+$ npm install
+```
+
+## Compilar y ejecutar el proyecto
+
+```bash
+# Modo desarrollo
+$ npm run start
+
+# Modo watch para desarrollo
+$ npm run start:dev
+```
+
+## Despliegue
+
+Cuando estés listo para desplegar tu aplicación NestJS en producción, hay algunas prácticas clave para garantizar su eficiencia. Consulta la [documentación de despliegue](https://docs.nestjs.com/deployment) para más información.
+
+Si buscas una plataforma en la nube para desplegar tu aplicación NestJS, puedes usar [Mau](https://mau.nestjs.com), la plataforma oficial para desplegar aplicaciones NestJS en AWS. Mau simplifica el despliegue con unos simples pasos:
+
+```bash
+$ npm install -g mau
+$ mau deploy
+```
+
+Con Mau, puedes desplegar tu aplicación en pocos clics, permitiéndote centrarte en el desarrollo de características en lugar de la gestión de la infraestructura.
+
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](https://github.com/nestjs/nest/blob/master/LICENSE).
