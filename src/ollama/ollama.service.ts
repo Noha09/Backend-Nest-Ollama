@@ -31,4 +31,21 @@ export class OllamaService {
             );
         }
     }
+
+    async getModels() {
+        try {
+            const { data } = await axios.get(`${this.OLLAMA_URL}/tags`, {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            return data;
+        } catch (error) {
+            throw new HttpException(
+                'Error al comunicarse con Ollama',
+                HttpStatus.INTERNAL_SERVER_ERROR,
+            );
+        }
+    }
 }

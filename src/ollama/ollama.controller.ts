@@ -1,4 +1,4 @@
-import { Controller, Body, Post } from '@nestjs/common';
+import { Controller, Body, Post, Get } from '@nestjs/common';
 import { OllamaService } from './ollama.service';
 
 @Controller('ollama')
@@ -19,5 +19,10 @@ export class OllamaController {
             console.error('Error in OllamaController:', error);
             throw new Error('Error al generar la respuesta');
         }
+    }
+
+    @Get('/models')
+    getModels() {
+        return this.ollamaService.getModels();
     }
 }
