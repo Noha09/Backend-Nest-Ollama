@@ -7,6 +7,7 @@ dotenv.config();
 @Injectable()
 export class OllamaService {
     private readonly logger = new Logger(OllamaService.name);
+
     private readonly OLLAMA_URL: string = process.env.OLLAMA_URL || 'http://localhost:11434/api';
 
     async response(prompt : string) {
@@ -26,6 +27,7 @@ export class OllamaService {
 
             return data?.response || 'Sin respuesta de Ollama';
         } catch (error) {
+            this.logger.error(error);
             throw new HttpException(
                 'Error al comunicarse con Ollama',
                 HttpStatus.INTERNAL_SERVER_ERROR,
@@ -43,6 +45,7 @@ export class OllamaService {
 
             return data;
         } catch (error) {
+            this.logger.error(error);
             throw new HttpException(
                 'Error al comunicarse con Ollama',
                 HttpStatus.INTERNAL_SERVER_ERROR,

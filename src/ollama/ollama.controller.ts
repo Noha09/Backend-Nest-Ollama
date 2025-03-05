@@ -1,8 +1,10 @@
-import { Controller, Body, Post, Get } from '@nestjs/common';
+import { Controller, Body, Post, Get, Logger } from '@nestjs/common';
 import { OllamaService } from './ollama.service';
 
 @Controller('ollama')
 export class OllamaController {
+    private readonly logger = new Logger(OllamaController.name);
+
     constructor(private readonly ollamaService: OllamaService) {}
 
     @Post('/response')
@@ -16,7 +18,7 @@ export class OllamaController {
             }
             return response;
         } catch (error) {
-            console.error('Error in OllamaController:', error);
+            this.logger.error('Error in OllamaController:', error);
             throw new Error('Error al generar la respuesta');
         }
     }
