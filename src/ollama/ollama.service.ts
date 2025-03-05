@@ -6,6 +6,7 @@ dotenv.config();
 
 @Injectable()
 export class OllamaService {
+    private readonly logger = new Logger(OllamaService.name);
     private readonly OLLAMA_URL: string = process.env.OLLAMA_URL || 'http://localhost:11434/api';
 
     async response(prompt : string) {

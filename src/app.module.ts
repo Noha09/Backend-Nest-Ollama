@@ -1,4 +1,4 @@
-import { Module, Logger,NestModule } from '@nestjs/common';
+import { Module, Logger } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { OllamaModule } from './ollama/ollama.module';
