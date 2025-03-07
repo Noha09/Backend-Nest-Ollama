@@ -30,19 +30,6 @@ $ npm run start
 $ npm run start:dev
 ```
 
-## Despliegue
-
-Cuando estés listo para desplegar tu aplicación NestJS en producción, hay algunas prácticas clave para garantizar su eficiencia. Consulta la [documentación de despliegue](https://docs.nestjs.com/deployment) para más información.
-
-Si buscas una plataforma en la nube para desplegar tu aplicación NestJS, puedes usar [Mau](https://mau.nestjs.com), la plataforma oficial para desplegar aplicaciones NestJS en AWS. Mau simplifica el despliegue con unos simples pasos:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-Con Mau, puedes desplegar tu aplicación en pocos clics, permitiéndote centrarte en el desarrollo de características en lugar de la gestión de la infraestructura.
-
 ## Licencia
 
 Este proyecto está bajo la licencia [MIT](https://github.com/nestjs/nest/blob/master/LICENSE).
